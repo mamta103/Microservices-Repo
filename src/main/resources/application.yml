@@ -1,0 +1,34 @@
+server:
+  port: 6000
+
+spring:
+  application:
+    name: QUIZ-SERVICE
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: mamta
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true       # Enables SQL statements in the logs
+    properties:
+      hibernate:
+        format_sql: true   # Formats the SQL output for better readability
+
+# Enable logging of SQL parameters (optional)
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG        # Logs SQL queries
+        type: TRACE       # Logs SQL parameters
+
+
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    path: /swagger-ui.html
