@@ -20,7 +20,7 @@ public class QuizServiceImpl implements QuizService {
 
     @Override
     public Quiz create(Quiz quiz) {
-        logger.info("Creating new quiz with title: {}", quiz.getTitle());
+        logger.info(" Creating new quiz with title: {}", quiz.getTitle());
         return quizRepository.save(quiz);
     }
 
